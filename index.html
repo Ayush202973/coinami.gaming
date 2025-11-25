@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coinami Gaming — Subscribe</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --text: #f6f6f2;
+            --accent1: #12ff2a;
+            --accent2: #d9534f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f, #171d17);
+            color: var(--text);
+        }
+
+        /* Navbar */
+        nav.navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 20px;
+            background: #05c746;
+            border-radius: 12px 12px 0px 0px;
+            gap: 14px;
+        }
+
+        .yt-icon {
+            width: 62px;
+            height: 42px;
+            border-radius: 10px;
+            background: #e21d1d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .yt-icon:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 16px solid #fff;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        nav h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 0;
+            color: #fff;
+            -webkit-text-stroke: 2px #000;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 5px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .logo-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 220px;
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .left-text {
+            font-size: 20px;
+            max-width: 700px;
+            line-height: 1.4;
+            margin-top: 0;
+        }
+
+        .cta-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 30px 40px;
+            border-radius: 24px;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+        }
+
+        .cta-card h3 {
+            margin-bottom: 34px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+       .subscribe-btn {
+    display: inline-block;       /* ensures transform works properly */
+    padding: 16px 36px;
+    font-size: 18px;
+    border-radius: 12px;
+    background-color: rgb(188, 11, 11);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 12px;
+}
+
+.subscribe-btn:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+    background-color: rgb(220, 20, 20); /* optional slight color change on hover */
+}
+
+
+        /* MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+  .modal {
+    background: #171d17;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    color: var(--text);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+
+    display: flex;
+    flex-direction: row; /* make buttons side by side */
+    justify-content: center; /* center horizontally */
+    gap: 16px; /* spacing between buttons */
+    flex-wrap: wrap; /* wrap on small screens */
+}
+.ok-btn{
+    padding: 14px 32px;
+    font-size: 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: 0.3s;
+    color: #fff;
+    background-color: rgb(188, 11, 11);
+    flex: 1 1 auto; /* allows buttons to resize nicely */
+    min-width: 120px; /* prevents buttons from being too small */
+}
+
+.subscribe-btn-modal {
+    padding: 14px 32px;
+    font-size: 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: 0.3s;
+    color: #fff;
+    background-color: rgb(41, 186, 8);
+    flex: 1 1 auto; /* allows buttons to resize nicely */
+    min-width: 120px; /* prevents buttons from being too small */
+}
+.ok-btn:hover,
+.subscribe-btn-modal:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        @media (max-width: 768px) {
+            nav h1 {
+                font-size: 28px;
+            }
+
+            .logo {
+                width: 180px;
+            }
+
+            .left-text {
+                font-size: 18px;
+            }
+
+            .cta-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    border-radius: 24px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+
+    display: flex;           /* added */
+    flex-direction: column;  /* added */
+    align-items: center;     /* optional, keeps button centered */
+    gap: 12px;               /* spacing between h3 and button */
+}
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="yt-icon"></div>
+        <h1>Coinami Gaming</h1>
+    </nav>
+
+    <div class="wrap">
+        <div class="logo-wrap">
+            <img class="logo" src="logo1.png" alt="Coinami Logo">
+        </div>
+
+        <section class="hero">
+            <p class="left-text">Subscribe to the channel for eFootball cloning tutorials, funny challenges, eFootball guides, and many more fun videos! 💚 <br>Thanks for your love and support 🙏.</p>
+
+            <aside class="cta-card">
+                <h3>Haven’t Subscribed yet?</h3>
+                <a class="subscribe-btn" href="#" id="subscribeBtn">SUBSCRIBE NOW</a>
+            </aside>
+        </section>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <p>💚 Your support keeps this channel alive! Your one subscribe will help our channel grow more. So, please kindly subscribe first and then click OK to proceed further.<br> <bold> Thank you </bold>🙏 </p>
+            <button class="ok-btn" id="modalOkBtn">OK</button>
+            <button class="subscribe-btn-modal" id="modalSubscribeBtn">SUBSCRIBE</button>
+        </div>
+    </div>
+
+    <script>
+let clickCount = 0;
+const subscribeBtn = document.getElementById('subscribeBtn');
+const modalOverlay = document.getElementById('modalOverlay');
+const modalOkBtn = document.getElementById('modalOkBtn');
+const modalSubscribeBtn = document.getElementById('modalSubscribeBtn');
+
+subscribeBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    clickCount++;
+
+    if (clickCount === 1) {
+        // First click → redirect to YouTube
+        window.open('https://www.youtube.com/@coinami-gaming', '_blank');
+        // Change button text for next click
+        subscribeBtn.textContent = "Visit Link";
+    } else if (clickCount === 2) {
+        // Second click → show modal
+        modalOverlay.classList.add('active');
+    }
+});
+
+// Modal OK button → go to next page
+modalOkBtn.addEventListener('click', function () {
+    modalOverlay.classList.remove('active');
+    window.location.href = "nextpage.html";
+});
+
+// Modal Subscribe button → open YouTube
+modalSubscribeBtn.addEventListener('click', function () {
+    window.open('https://www.youtube.com/@coinami-gaming', '_blank');
+});
+</script>
+
+
+</body>
+
+</html>

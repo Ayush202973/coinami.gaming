@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coinami Gaming — Downloads</title>
+
+    <style>
+        :root {
+            --bg: #171d17;
+            --accent: #d9534f;
+            --text: #f6f6f2;
+            --muted: #cfcfcf;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            -webkit-text-stroke: 2px #000;
+            color: #f6f6f2;
+            text-align: center;
+        }
+
+        /* Search bar */
+        .search-container {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 12px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+        }
+
+        .downloads {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            max-width: 500px;
+            align-items: center;
+        }
+
+        .download-card {
+            width: 100%;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+            transition: transform 0.2s, background 0.2s;
+            display: flex;
+            flex-direction: column; /* image on top */
+            align-items: center;
+            gap: 15px;
+        }
+
+        .download-card:hover {
+            transform: scale(1.05);
+            background: rgba(217, 83, 79, 0.2);
+        }
+
+        .download-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px; /* subtle card-like rounding */
+            object-fit: cover;
+        }
+
+        .download-card p {
+            margin: 0;
+            font-size: 16px;
+            color: #ffffff; /* normal text white */
+        }
+        .download-card p strong {
+    color: #05c746; /* green for bold text */
+}
+
+        .download-btn {
+    display: inline-block;
+    width: 100%; /* full width of the card */
+    max-width: 300px; /* optional: cap width */
+    text-align: center;
+    padding: 16px 0; /* vertical padding only */
+    background: var(--accent);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.download-btn:hover {
+    background: #c12b2b;
+    transform: scale(1.05);
+}
+
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 42px;
+            }
+
+            .download-btn {
+                font-size: 16px;
+                padding: 14px 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Download Files</h1>
+
+    <!-- Search bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search files...">
+    </div>
+
+    <div class="downloads" id="downloadsContainer">
+        <div class="download-card">
+            <img src="efootball.png" alt="eFootball IPA">
+            <p>Get the latest <strong>eFootball IPA</strong> for your device</p>
+            <a href="path-to-efootball.ipa" class="download-btn" download>Download IPA</a>
+        </div>
+
+        
+
+        <div class="download-card">
+            <img src="esign.png" alt="eSign App">
+            <p>Download the <strong>eSign App</strong> to sign the IPA</p>
+            <a href="path-to-esign-app.app" class="download-btn" download>Download eSign App</a>
+        </div>
+        <div class="download-card">
+            <img src="cert.jpg" alt="eSign Certificate">
+            <p>Install the <strong>eSign Certificate</strong> to trust the app</p>
+            <a href="path-to-esign-cert.cert" class="download-btn" download>Download Certificate</a>
+        </div>
+    </div>
+
+    <script>
+    const searchInput = document.getElementById('searchInput');
+    const downloadsContainer = document.getElementById('downloadsContainer');
+    const downloadCards = downloadsContainer.getElementsByClassName('download-card');
+
+    searchInput.addEventListener('input', function() {
+        const filter = this.value.toLowerCase();
+
+        Array.from(downloadCards).forEach(card => {
+            const text = card.innerText.toLowerCase();
+            if (text.includes(filter)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>
