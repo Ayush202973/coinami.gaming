@@ -42,8 +42,8 @@
         }
 
         .yt-icon {
-            width: 62px;
-            height: 42px;
+            width: 3rem;
+            height: 2rem;
             border-radius: 10px;
             background: #e21d1d;
             display: flex;
@@ -190,6 +190,20 @@
     gap: 16px; /* spacing between buttons */
     flex-wrap: wrap; /* wrap on small screens */
 }
+.cta-buttons a {
+    display: flex;              /* allows perfect centering */
+    align-items: center;        /* vertical center */
+    justify-content: center;    /* horizontal center */
+    padding: 16px 32px;         /* equal padding */
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px;
+    text-decoration: none;
+    flex: 1;                    /* equal width for both buttons */
+    min-width: 160px;           /* prevent being too small */
+    height: 56px;               /* FIXED HEIGHT – makes both equal */
+}
+
 .ok-btn{
     padding: 14px 32px;
     font-size: 18px;
@@ -203,6 +217,17 @@
     background-color: rgb(188, 11, 11);
     flex: 1 1 auto; /* allows buttons to resize nicely */
     min-width: 120px; /* prevents buttons from being too small */
+}/* FAQ Button */
+.faq-btn {
+    background-color: #0a84ff;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.faq-btn:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+    background-color: #1b90ff;
 }
 
 .subscribe-btn-modal {
@@ -275,7 +300,11 @@
 
             <aside class="cta-card">
                 <h3>Haven’t Subscribed yet?</h3>
-                <a class="subscribe-btn" href="#" id="subscribeBtn">SUBSCRIBE NOW</a>
+                <div class="cta-buttons">
+    <a class="subscribe-btn" href="#" id="subscribeBtn">SUBSCRIBE NOW</a>
+    <a class="faq-btn" href="faq.html">FAQ</a>
+</div>
+
             </aside>
         </section>
     </div>
