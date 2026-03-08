@@ -6,148 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Coinami Gaming — Downloads</title>
 
-   <style>
-    :root {
-        --bg1: #0f2027;
-        --bg2: #203a43;
-        --bg3: #2c5364;
-        --accent: #ff4d4d;
-        --text: #ffffff;
-        --glass: rgba(255, 255, 255, 0.08);
-        --border: rgba(255, 255, 255, 0.15);
-    }
+    <style>
+        :root {
+            --bg1: #0f2027;
+            --bg2: #203a43;
+            --bg3: #2c5364;
+            --accent: #ff4d4d;
+            --text: #ffffff;
+            --glass: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.15);
+        }
 
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
-        color: var(--text);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-        padding: 20px;
-    }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    h1 {
-        font-size: 55px;
-        margin-bottom: 30px;
-        text-align: center;
-        background: linear-gradient(90deg, #ffffff, #ff4d4d);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .search-container {
-        width: 100%;
-        max-width: 500px;
-        margin-bottom: 30px;
-    }
-
-    .search-input {
-        width: 100%;
-        padding: 14px 20px;
-        border-radius: 14px;
-        border: 1px solid var(--border);
-        font-size: 16px;
-        outline: none;
-        backdrop-filter: blur(10px);
-        background: var(--glass);
-        color: white;
-        transition: 0.3s;
-    }
-
-    .search-input:focus {
-        border-color: var(--accent);
-        box-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
-    }
-
-    .downloads {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        width: 100%;
-        max-width: 500px;
-        align-items: center;
-    }
-
-    .download-card {
-        width: 100%;
-        background: var(--glass);
-        backdrop-filter: blur(20px);
-        border: 1px solid var(--border);
-        padding: 30px;
-        border-radius: 20px;
-        text-align: center;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-        transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-    }
-
-    .download-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 40px rgba(255, 77, 77, 0.3);
-    }
-
-    .download-card img {
-        width: 90px;
-        height: 90px;
-        border-radius: 16px;
-        object-fit: cover;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    .download-card p {
-        margin: 0;
-        font-size: 16px;
-        color: #f2f2f2;
-    }
-
-    .download-card p strong {
-        color: #00ff88;
-    }
-
-    .download-btn {
-        display: inline-block;
-        width: 100%;
-        max-width: 320px;
-        text-align: center;
-        padding: 16px 0;
-        background: linear-gradient(90deg, #ff4d4d, #ff1a1a);
-        color: white;
-        border-radius: 14px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 17px;
-        transition: all 0.3s ease;
-        box-shadow: 0 6px 18px rgba(255, 77, 77, 0.4);
-    }
-    .recommended {
-    color: #00ff88; /* change this to any color you want */
-    font-weight: 900;
-    margin-left: 6px;
-}
-
-
-    .download-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 25px rgba(255, 77, 77, 0.7);
-    }
-
-    @media (max-width: 600px) {
         h1 {
-            font-size: 38px;
+            font-size: 55px;
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(90deg, #ffffff, #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            font-size: 16px;
+            outline: none;
+            backdrop-filter: blur(10px);
+            background: var(--glass);
+            color: white;
+            transition: 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
+        }
+
+        .downloads {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            max-width: 500px;
+            align-items: center;
+        }
+
+        .download-card {
+            width: 100%;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .download-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(255, 77, 77, 0.3);
+        }
+
+        .download-card img {
+            width: 90px;
+            height: 90px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .download-card p {
+            margin: 0;
+            font-size: 16px;
+            color: #f2f2f2;
+        }
+
+        .download-card p strong {
+            color: #00ff88;
         }
 
         .download-btn {
-            font-size: 15px;
-            padding: 14px 0;
+            display: inline-block;
+            width: 100%;
+            max-width: 320px;
+            text-align: center;
+            padding: 16px 0;
+            background: linear-gradient(90deg, #ff4d4d, #ff1a1a);
+            color: white;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(255, 77, 77, 0.4);
         }
-    }
-</style>
+
+        .recommended {
+            color: #00ff88;
+            /* change this to any color you want */
+            font-weight: 900;
+            margin-left: 6px;
+        }
+
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 77, 77, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 38px;
+            }
+
+            .download-btn {
+                font-size: 15px;
+                padding: 14px 0;
+            }
+        }
+    </style>
 
 </head>
 
@@ -160,39 +162,40 @@
     </div>
 
     <div class="downloads" id="downloadsContainer">
-       <div class="download-card">
-    <img src="efootball.png" alt="eFootball IPA">
-    <p>Get the latest <strong>eFootball IPA</strong> (5 Feb) <br> Install any one ⬇️</p>
-    <a href="https://drive.usercontent.google.com/download?id=1LaGxEzvgZYFSu6jHdLCNF2AVYQRthBBs&export=download&authuser=0" target="_blank"
-        class="download-btn" download>Download IPA (Link 1)</a>
-    <a href="https://drive.usercontent.google.com/download?id=1Z2_GyNmB85nfqLouFoG5KNAITm2SWhYh&export=download&authuser=0" target="_blank"
-        class="download-btn" download>Download IPA (Link 2)</a>
-    <a href="https://drive.usercontent.google.com/download?id=1FzoXVLFBTvP32lbL9TeCeXsXk31zW6bD&export=download&authuser=0" target="_blank"
-        class="download-btn" download>Download IPA (Link 3)</a>
-</div>
+        <div class="download-card">
+            <img src="efootball.png" alt="eFootball IPA">
+            <p>Get the latest <strong>eFootball IPA</strong> (5 Mar) <br> Install any one ⬇️</p>
+            <a href="https://drive.usercontent.google.com/download?id=1w6TsaA-I1UpjIyM1kOCIhB0zLZguRghz&export=download&authuser=0"
+                target="_blank" class="download-btn" download>Download IPA (Link 1)</a>
+            <a href="https://drive.usercontent.google.com/download?id=1aprPAPUCgU-mfgF5FKTClVncV6bKei-E&export=download&authuser=0"
+                target="_blank" class="download-btn" download>Download IPA (Link 2)</a>
+            <a href="https://drive.usercontent.google.com/download?id=1-MI6XbmpWRS64-xOlw5DstK9Ku_JVvrz&export=download&authuser=0"
+                target="_blank" class="download-btn" download>Download IPA (Link 3)</a>
+        </div>
 
 
         <div class="download-card">
             <img src="dns.png" alt="eSign Certificate">
             <p>Install the <strong>DNS Profile</strong> to prevent esign not working</p>
-            <a href="dns_profile.mobileconfig"
-                target="_blank" class="download-btn" download>Download DNS Profile</a>
+            <a href="dns_profile.mobileconfig" target="_blank" class="download-btn" download>Download DNS Profile</a>
         </div>
 
         <div class="download-card">
             <img src="esign.png" alt="eSign App">
             <p>Download the <strong>eSign App</strong> to sign the IPA</p>
-           <a href="https://api.khoindvn.io.vn/aAqGZk" target="_blank" class="download-btn">
-    Forevermark Marketing (Shanghai) 
-    <span class="recommended">RECOMMENDED</span>
-</a>
+            <a href="https://api.khoindvn.io.vn/RoAzoJ" target="_blank" class="download-btn">
+                National Oilwell Varco✅
+                <span class="recommended">RECOMMENDED</span>
+            </a>
+            <a href="https://api.khoindvn.io.vn/mJoVMn" target="_blank" class="download-btn" download>VIETNAM AIRLINES
+                JSC</a>
+            <a href="https://api.khoindvn.io.vn/IDcW4P" target="_blank" class="download-btn" download>PowerChina
+                International Group Limited</a>
 
-             <a href="https://api.khoindvn.io.vn/IDcW4P" target="_blank" class="download-btn" download>PowerChina International Group Limited</a>
-    <a href="https://api.khoindvn.eu.org/KXcveB" target="_blank"
-        class="download-btn" download>Qingdao Rural Commercial Bank Co., Ltd</a>
-        <p>If the above three esign did not get installed on your device then visit the Official site and try installing all the versions of esign one might get installed.</p>
- <a href="https://khoindvn.io.vn/" target="_blank"
-        class="download-btn" download>Click Here For More eSign Versions</a>
+            <p>If the above three esign did not get installed on your device then visit the Official site and try
+                installing all the versions of esign one might get installed.</p>
+            <a href="https://khoindvn.io.vn/" target="_blank" class="download-btn" download>Click Here For More eSign
+                Versions</a>
         </div>
 
         <div class="download-card">
@@ -216,7 +219,7 @@
                 if (text.includes(filter)) {
                     card.style.display = 'flex';
                 } else {
-                    card.style.display = 'none';         
+                    card.style.display = 'none';
                 }
             });
         });
