@@ -1,0 +1,167 @@
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eSign Installer</title>
+
+<style>
+:root {
+    --bg1: #0f2027;
+    --bg2: #203a43;
+    --bg3: #2c5364;
+    --accent: #ff4d4d;
+    --text: #ffffff;
+    --glass: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.15);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 35px 25px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ffffff, #ff4d4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.version {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #00ff88;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    max-width: 340px;
+    padding: 16px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.primary {
+    background: linear-gradient(90deg, #ff4d4d, #ff1a1a);
+}
+
+.secondary {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+.info {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 14px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>eSign Installer</h1>
+
+    <div class="version" id="versionBox">
+        Loading version...
+    </div>
+
+    <div class="btn-container">
+
+        <!-- APP BUTTON -->
+        <a id="appBtn" class="btn primary" target="_blank">
+            📲 Install eSign App
+        </a>
+
+        <!-- CERTIFICATE BUTTON -->
+        <a id="certBtn" class="btn secondary" download>
+            📜 Install eSign Certificate
+        </a>
+
+    </div>
+
+    <div class="info">
+        If installation fails, try another version from the main page.
+    </div>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+// Get values from URL
+const name = params.get("name") || "Default eSign Build";
+const app = params.get("app") || "#";
+const cert = params.get("cert") || "#";
+
+// Set version text
+document.getElementById("versionBox").innerText =
+    "Selected Version: " + decodeURIComponent(name);
+
+// Set app install link
+document.getElementById("appBtn").href = app;
+
+// Set certificate download link
+document.getElementById("certBtn").href = cert;
+</script>
+
+</body>
+</html>
+```
