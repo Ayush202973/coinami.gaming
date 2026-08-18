@@ -1,324 +1,389 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Coinami Gaming — Subscribe</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coinami Gaming — Subscribe</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-:root{
-    --glass:rgba(255,255,255,0.08);
-    --border:rgba(255,255,255,0.15);
-    --green:#12ff2a;
-    --red:#ff3b3b;
-}
+    <style>
+        :root {
+            --glass: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.15);
+            --green: #12ff2a;
+            --red: #ff3b3b;
+        }
 
-*{box-sizing:border-box;margin:0;padding:0}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
 
-html,body{
-    height:100%;
-    font-family:'Poppins',sans-serif;
-    color:#fff;
-    overflow-x:hidden;
-}
+        html,
+        body {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
 
-/* 🌈 Animated Gradient Background */
-body{
-    margin: 0; height: 100%; font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #0f0f0f, #171d17); color: var(--text);
-}
+        /* 🌈 Animated Gradient Background */
+        body {
+            margin: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f, #171d17);
+            color: var(--text);
+        }
 
-@keyframes gradientMove{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%
+            }
 
-@keyframes pageFade{
-    to{opacity:1}
-}
+            50% {
+                background-position: 100% 50%
+            }
 
-/* ✨ Floating Particles */
-.particles{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:0;
-}
+            100% {
+                background-position: 0% 50%
+            }
+        }
 
-.particles span{
-    position:absolute;
-    width:4px;
-    height:4px;
-    background:rgba(255,255,255,0.6);
-    border-radius:50%;
-    animation:floatUp 10s linear infinite;
-}
+        @keyframes pageFade {
+            to {
+                opacity: 1
+            }
+        }
 
-@keyframes floatUp{
-    from{transform:translateY(100vh);opacity:0}
-    20%{opacity:1}
-    to{transform:translateY(-10vh);opacity:0}
-}
+        /* ✨ Floating Particles */
+        .particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
 
-/* 🔥 Navbar Glass */
-/* 🔥 OLD STYLE NAVBAR BACK */
-nav{
-    position:relative;
-    z-index:2;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:14px;
-    padding:14px 20px;
-    background:#05c746; /* your original green */
-    border-radius:12px 12px 0px 0px;
-}
+        .particles span {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: floatUp 10s linear infinite;
+        }
 
-/* YouTube Icon */
-.yt-icon{
-    width:3rem;
-    height:2rem;
-    border-radius:10px;
-    background:#e21d1d;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
+        @keyframes floatUp {
+            from {
+                transform: translateY(100vh);
+                opacity: 0
+            }
 
-.yt-icon:before{
-    content:'';
-    border-left:16px solid #fff;
-    border-top:10px solid transparent;
-    border-bottom:10px solid transparent;
-}
+            20% {
+                opacity: 1
+            }
 
-/* 🔥 ORIGINAL TEXT STYLE */
-nav h1{
-    font-size:42px;
-    font-weight:800;
-    margin:0;
-    color:#fff;
-    -webkit-text-stroke:2px #000;
-}
+            to {
+                transform: translateY(-10vh);
+                opacity: 0
+            }
+        }
 
+        /* 🔥 Navbar Glass */
+        /* 🔥 OLD STYLE NAVBAR BACK */
+        nav {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 20px;
+            background: #05c746;
+            /* your original green */
+            border-radius: 12px 12px 0px 0px;
+        }
 
-/* Layout */
-.wrap{
-    position:relative;
-    z-index:2;
-    max-width:1100px;
-    margin:60px auto;
-    text-align:center;
-    padding:0 20px;
-}
+        /* YouTube Icon */
+        .yt-icon {
+            width: 3rem;
+            height: 2rem;
+            border-radius: 10px;
+            background: #e21d1d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.logo{
-    width:220px;
-    border-radius:20px;
-    box-shadow:0 20px 40px rgba(0,0,0,.6);
-    animation:float 4s ease-in-out infinite;
-}
+        .yt-icon:before {
+            content: '';
+            border-left: 16px solid #fff;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
 
-@keyframes float{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-18px)}
-}
-
-.left-text{
-    margin:25px auto;
-    max-width:700px;
-    font-size:20px;
-    line-height:1.6;
-    opacity:.9;
-}
-
-/* Glass Card */
-.cta-card{
-    margin-top:30px;
-    background:var(--glass);
-    backdrop-filter:blur(20px);
-    border:1px solid var(--border);
-    padding:40px;
-    border-radius:24px;
-    box-shadow:0 12px 40px rgba(0,0,0,.6);
-}
-
-.cta-card h3{margin-bottom:25px}
-
-/* Buttons */
-.cta-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.subscribe-btn, .faq-btn{
-    padding:16px 36px;
-    border-radius:14px;
-    font-weight:700;
-    text-decoration:none;
-    transition:.3s;
-    position:relative;
-    overflow:hidden;
-}
-
-/* Subscribe Glow */
-.subscribe-btn{
-    background:linear-gradient(90deg,#ff0000,#ff4d4d);
-    color:#fff;
-    box-shadow:0 8px 30px rgba(255,0,0,.6);
-}
-
-.subscribe-btn:hover{
-    transform:scale(1.1);
-    box-shadow:0 12px 40px rgba(255,0,0,.9);
-}
-
-/* FAQ */
-.faq-btn{
-    background:linear-gradient(90deg,#0072ff,#00c6ff);
-    color:#fff;
-    box-shadow:0 8px 25px rgba(0,114,255,.6);
-}
-.faq-btn:hover{transform:scale(1.1)}
-
-/* Modal */
-.modal-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.7);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    opacity:0;
-    pointer-events:none;
-    transition:.3s;
-    z-index:5;
-}
-
-.modal-overlay.active{
-    opacity:1;
-    pointer-events:all;
-}
-
-.modal{
-    background:var(--glass);
-    backdrop-filter:blur(20px);
-    border:1px solid var(--border);
-    padding:40px;
-    border-radius:24px;
-    max-width:450px;
-    text-align:center;
-    transform:scale(.8);
-    transition:.3s;
-}
+        /* 🔥 ORIGINAL TEXT STYLE */
+        nav h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 0;
+            color: #fff;
+            -webkit-text-stroke: 2px #000;
+        }
 
 
+        /* Layout */
+        .wrap {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            margin: 60px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            width: 220px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .6);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-18px)
+            }
+        }
+
+        .left-text {
+            margin: 25px auto;
+            max-width: 700px;
+            font-size: 20px;
+            line-height: 1.6;
+            opacity: .9;
+        }
+
+        /* Glass Card */
+        .cta-card {
+            margin-top: 30px;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .6);
+        }
+
+        .cta-card h3 {
+            margin-bottom: 25px
+        }
+
+        /* Buttons */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .subscribe-btn,
+        .faq-btn {
+            padding: 16px 36px;
+            border-radius: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subscribe Glow */
+        .subscribe-btn {
+            background: linear-gradient(90deg, #ff0000, #ff4d4d);
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(255, 0, 0, .6);
+        }
+
+        .subscribe-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(255, 0, 0, .9);
+        }
+
+        /* FAQ */
+        .faq-btn {
+            background: linear-gradient(90deg, #0072ff, #00c6ff);
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(0, 114, 255, .6);
+        }
+
+        .faq-btn:hover {
+            transform: scale(1.1)
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: .3s;
+            z-index: 5;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 24px;
+            max-width: 450px;
+            text-align: center;
+            transform: scale(.8);
+            transition: .3s;
+        }
 
 
-.modal-overlay.active .modal{transform:scale(1)}
 
-.modal button{
-    margin:15px;
-    padding:14px 28px;
-    border:none;
-    border-radius:12px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.3s;
-}
 
-.ok-btn{background:#ff3b3b;color:#fff}
-.subscribe-btn-modal{background:#12ff2a;color:#000}
+        .modal-overlay.active .modal {
+            transform: scale(1)
+        }
 
-.modal button:hover{transform:scale(1.1)}
+        .modal button {
+            margin: 15px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+        }
 
-@media(max-width:768px){
-    nav h1{font-size:24px}
-    .logo{width:150px}
-    .left-text{font-size:18px}
-}
-</style>
+        .ok-btn {
+            background: #ff3b3b;
+            color: #fff
+        }
+
+        .subscribe-btn-modal {
+            background: #12ff2a;
+            color: #000
+        }
+
+        .modal button:hover {
+            transform: scale(1.1)
+        }
+
+        @media(max-width:768px) {
+            nav h1 {
+                font-size: 24px
+            }
+
+            .logo {
+                width: 150px
+            }
+
+            .left-text {
+                font-size: 18px
+            }
+        }
+    </style>
 
 
 </head>
 
 <body>
 
-<div class="particles"></div>
+    <div class="particles"></div>
 
-<nav>
-<div class="yt-icon"></div>
-<h1>Coinami Gaming</h1>
-</nav>
+    <nav>
+        <div class="yt-icon"></div>
+        <h1>Coinami Gaming</h1>
+    </nav>
 
-<div class="wrap">
-<img class="logo" src="logo1.png" alt="Coinami Logo">
+    <div class="wrap">
+        <img class="logo" src="logo1.png" alt="Coinami Logo">
 
-<p class="left-text">
-Subscribe to the channel for eFootball cloning tutorials, funny challenges, guides and more fun videos 💚<br>
-Thanks for your love and support 🙏
-</p>
+        <p class="left-text">
+            Subscribe to the channel for eFootball cloning tutorials, funny challenges, guides and more fun videos
+            💚<br>
+            Thanks for your love and support 🙏
+        </p>
 
-<div class="cta-card">
-<h3>Haven’t Subscribed yet?</h3>
-<div class="cta-buttons">
-<a class="subscribe-btn" href="#" id="subscribeBtn">SUBSCRIBE NOW</a>
-<a class="faq-btn" href="faq.html">FAQ</a>
-</div>
-</div>
-</div>
+        <div class="cta-card">
+            <h3>Haven’t Subscribed yet?</h3>
+            <div class="cta-buttons">
+                <a class="subscribe-btn" href="#" id="subscribeBtn">SUBSCRIBE NOW</a>
+                <a class="faq-btn" href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
 
-<div class="modal-overlay" id="modalOverlay">
-<div class="modal">
-<p>💚 Your support keeps this channel alive! Please subscribe first and then click OK to proceed.</p>
-<button class="ok-btn" id="modalOkBtn">OK</button>
-<button class="subscribe-btn-modal" id="modalSubscribeBtn">SUBSCRIBE</button>
-</div>
-</div>
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <p>💚 Your support keeps this channel alive! Please subscribe first and then click OK to proceed.</p>
+            <button class="ok-btn" id="modalOkBtn">OK</button>
+            <button class="subscribe-btn-modal" id="modalSubscribeBtn">SUBSCRIBE</button>
+        </div>
+    </div>
 
-<script>
-// Floating particles
-const particleContainer=document.querySelector('.particles');
-for(let i=0;i<40;i++){
-    const span=document.createElement('span');
-    span.style.left=Math.random()*100+"vw";
-    span.style.animationDuration=(6+Math.random()*6)+"s";
-    span.style.opacity=Math.random();
-    particleContainer.appendChild(span);
-}
+    <script>
+        // Floating particles
+        const particleContainer = document.querySelector('.particles');
+        for (let i = 0; i < 40; i++) {
+            const span = document.createElement('span');
+            span.style.left = Math.random() * 100 + "vw";
+            span.style.animationDuration = (6 + Math.random() * 6) + "s";
+            span.style.opacity = Math.random();
+            particleContainer.appendChild(span);
+        }
 
-// Subscribe Logic
-let clickCount=0;
-const subscribeBtn=document.getElementById('subscribeBtn');
-const modalOverlay=document.getElementById('modalOverlay');
-const modalOkBtn=document.getElementById('modalOkBtn');
-const modalSubscribeBtn=document.getElementById('modalSubscribeBtn');
+        // Subscribe Logic
+        let clickCount = 0;
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalOkBtn = document.getElementById('modalOkBtn');
+        const modalSubscribeBtn = document.getElementById('modalSubscribeBtn');
 
-subscribeBtn.addEventListener('click',function(e){
-    e.preventDefault();
-    clickCount++;
+        subscribeBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            clickCount++;
 
-    if(clickCount===1){
-        window.open('https://www.youtube.com/@coinami-gaming','_blank');
-        subscribeBtn.textContent="Visit Link";
-    }else if(clickCount===2){
-        modalOverlay.classList.add('active');
-    }
-});
+            if (clickCount === 1) {
+                window.open('https://www.youtube.com/@coinami-gaming', '_blank');
+                subscribeBtn.textContent = "Visit Link";
+            } else if (clickCount === 2) {
+                modalOverlay.classList.add('active');
+            }
+        });
 
-modalOkBtn.addEventListener('click',function(){
-    modalOverlay.classList.remove('active');
-    window.location.href="nextpage.html";
-});
+        modalOkBtn.addEventListener('click', function () {
+            modalOverlay.classList.remove('active');
+            window.location.href = "nextpage.html";
+        });
 
-modalSubscribeBtn.addEventListener('click',function(){
-    window.open('https://www.youtube.com/@coinami-gaming','_blank');
-});
-</script>
+        modalSubscribeBtn.addEventListener('click', function () {
+            window.open('https://www.youtube.com/@coinami-gaming', '_blank');
+        });
+    </script>
 
 </body>
+
 </html>
